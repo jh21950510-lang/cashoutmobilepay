@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>모바일페이 - 365일 24시간 빠르고 안전한 모바일 상품권 정산</title>
   <meta name="description" content="컬쳐랜드 85%, 모바일백화점상품권 88% 그 외 상담문의주세요! 실시간 최고가 정산 상담" />
+  <meta name="keywords" content="모바일페이, 컬쳐랜드현금화, 모바일상품권, 백화점상품권, 상품권정산" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="모바일페이 - 24시간 실시간 간편 상담" />
+  <meta property="og:description" content="컬쳐랜드 85%, 모바일백화점상품권 88% 5분 내 빠른 정산 완료" />
+  <meta property="og:url" content="https://www.cashoutmobilepay.co.kr" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -54,11 +61,11 @@
 
       <!-- 버튼 세트 -->
       <div class="space-y-2 max-w-xs mx-auto mb-6">
-        <a href="clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
+        <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
           <i class="fa-solid fa-comment"></i>
           <span>채팅 상담하기</span>
         </a>
-        <a href="010-9672-9767" class="w-full bg-white hover:bg-slate-50 text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
+        <a href="tel:010-9672-9767" class="w-full bg-white hover:bg-slate-50 text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
           <i class="fa-solid fa-phone"></i>
           <span>전화 상담하기</span>
         </a>
@@ -169,13 +176,13 @@
       </form>
     </section>
 
-    <!-- 사업자 정보 푸터 (수정 반영) -->
+    <!-- 사업자 정보 푸터 -->
     <footer class="bg-slate-200/80 rounded-2xl p-5 text-[11px] text-slate-600 space-y-2 mx-3">
       <p class="font-bold text-slate-800">모바일페이 고객센터 및 사업자 정보</p>
       <div class="leading-relaxed text-slate-500">
         상호명: 모바일페이 | 대표자: 강태현<br />
         사업자등록번호: 875-96-01634 | 도메인: cashoutmobilepay.co.kr<br />
-        고객센터: 010-0000-0000 | 365일 24시간 연중무휴
+        고객센터: 010-9672-9767 | 365일 24시간 연중무휴
       </div>
       <p class="text-slate-400 pt-2 border-t border-slate-300">
         © 2026 모바일페이. All rights reserved.
@@ -186,11 +193,11 @@
   <!-- 하단 고정 플로팅 바 -->
   <aside class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-2.5 z-50 shadow-2xl">
     <div class="max-w-md mx-auto grid grid-cols-2 gap-2">
-      <a href="tel:1588-0000" class="bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
+      <a href="tel:010-9672-9767" class="bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
         <i class="fa-solid fa-phone"></i>
         <span>전화 상담하기</span>
       </a>
-      <a href="https://pf.kakao.com/" target="_blank" rel="noopener noreferrer" class="bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
+      <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
         <i class="fa-solid fa-comment"></i>
         <span>채팅 상담하기</span>
       </a>
@@ -229,7 +236,7 @@
       const category = document.getElementById('userCategory').value;
       const amount = document.getElementById('userAmount').value;
 
-      const message = `🚨 [신규 상담 신청 접수]\n\n• 성함: ${name}\n• 연락처: ${phone}\n• 희망품목: ${category}\n• 희망금액: ${amount}`;
+      const message = `🚨 [모바일페이 신규 상담 신청]\n\n• 성함: ${name}\n• 연락처: ${phone}\n• 희망품목: ${category}\n• 희망금액: ${amount}`;
 
       const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
