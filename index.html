@@ -48,13 +48,67 @@
     body { font-family: 'Pretendard', sans-serif; }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-800 pb-28">
+<body class="bg-slate-100 text-slate-800 pb-28 relative">
 
-  <!-- 상단 네비게이션 헤더 -->
+  <!-- 1. 좌측 슬라이드 사이드바 메뉴 (2번 이미지 스타일) -->
+  <div id="sideMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+  
+  <aside id="sideMenu" class="fixed top-0 left-0 bottom-0 w-72 max-w-[80vw] bg-[#0c1033] text-white z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl border-r border-indigo-900/50">
+    <div>
+      <!-- 사이드바 상단 로고 & 닫기 버튼 -->
+      <div class="flex items-center justify-between pb-6 border-b border-indigo-900/80">
+        <a href="/" class="flex items-center">
+          <img src="모바일페이이미지2.png" alt="모바일페이" class="h-8 w-auto object-contain">
+        </a>
+        <button id="closeMenuBtn" class="text-slate-400 hover:text-white text-xl p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- 메뉴 리스트 (SEO 및 게시판 연동 경로) -->
+      <nav class="mt-6 space-y-1 text-sm font-semibold">
+        <a href="/" class="block py-3 px-3 rounded-lg text-amber-400 bg-white/5 border-l-4 border-amber-400 transition">
+          M페이 소개
+        </a>
+        <a href="#trust" onclick="toggleMenu()" class="block py-3 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          수수료 안내 (요율표)
+        </a>
+        <a href="#consultForm" onclick="toggleMenu()" class="block py-3 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          진행 안내 (상담접수)
+        </a>
+        <a href="/guide/voucher/" class="block py-3 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          공지사항
+        </a>
+        <a href="/guide/mobile-pay/" class="block py-3 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          이용 후기
+        </a>
+        <a href="/faq/" class="block py-3 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition">
+          질문 답변 (FAQ)
+        </a>
+      </nav>
+    </div>
+
+    <!-- 사이드바 하단 버튼 세트 -->
+    <div class="space-y-2 pt-6 border-t border-indigo-900/60">
+      <a href="tel:010-3965-9767" class="w-full bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-2.5 rounded-lg flex items-center justify-center space-x-2 text-xs shadow transition">
+        <i class="fa-solid fa-phone"></i>
+        <span>전화 상담하기</span>
+      </a>
+      <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-2.5 rounded-lg flex items-center justify-center space-x-2 text-xs shadow transition">
+        <i class="fa-solid fa-comment"></i>
+        <span>채팅 상담하기</span>
+      </a>
+      <div class="pt-2 text-[10px] text-slate-500 text-center">
+        365일 24시간 실시간 고객센터
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. 상단 네비게이션 헤더 -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <button class="text-slate-700 text-lg focus:outline-none flex items-center space-x-1.5 font-bold">
+        <button id="openMenuBtn" class="text-slate-700 text-lg focus:outline-none flex items-center space-x-1.5 font-bold hover:text-blue-600 transition">
           <i class="fa-solid fa-bars"></i>
           <span class="text-xs uppercase tracking-wider">MENU</span>
         </button>
@@ -71,22 +125,55 @@
 
   <main class="w-full space-y-6">
 
-    <!-- 1. 히어로 배너 섹션 (화면 좌우 꽉 찬 와이드 배경) -->
-    <section class="w-full bg-gradient-to-b from-[#0e1630] via-[#121c42] to-[#1a237e] text-white pt-10 pb-12 px-5 text-center shadow-lg">
+    <!-- 3. 히어로 배너 섹션 (반응형 1, 2, 3 슬라이더 탑재) -->
+    <section class="w-full bg-gradient-to-b from-[#0e1630] via-[#121c42] to-[#1a237e] text-white pt-10 pb-12 px-5 text-center shadow-lg overflow-hidden">
       <div class="max-w-xl mx-auto">
         <div class="inline-flex items-center bg-white/10 backdrop-blur border border-white/20 px-3.5 py-1 rounded-full text-xs text-slate-200 mb-5 font-medium shadow-sm">
           <span class="text-emerald-400 font-bold mr-1.5">N</span> 네이버에 <strong class="text-white ml-1 font-bold">모바일페이</strong>를 검색해보세요
         </div>
 
-        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
-          MOBILE<br />
-          <span class="text-amber-400">SOLUTION</span>
-        </h1>
-        
-        <p class="text-xs md:text-sm text-slate-300 mb-8 leading-relaxed">
-          시간과 장소에 구애받지 않고<br />
-          모바일에서 <span class="text-white font-bold">더 빠르고 편리하게</span> 상담을 진행합니다.
-        </p>
+        <!-- 슬라이드 컨테이너 -->
+        <div class="relative w-full overflow-hidden min-h-[160px]">
+          <div id="sliderTrack" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+            
+            <!-- 슬라이드 1 (기본 솔루션) -->
+            <div class="w-full flex-shrink-0">
+              <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
+                MOBILE<br />
+                <span class="text-amber-400">SOLUTION</span>
+              </h1>
+              <p class="text-xs md:text-sm text-slate-300 mb-6 leading-relaxed">
+                시간과 장소에 구애받지 않고<br />
+                모바일에서 <span class="text-white font-bold">더 빠르고 편리하게</span> 상담을 진행합니다.
+              </p>
+            </div>
+
+            <!-- 슬라이드 2 (초스피드 3분 입금) -->
+            <div class="w-full flex-shrink-0">
+              <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
+                QUICK & SAFE<br />
+                <span class="text-amber-400">FAST PAY</span>
+              </h1>
+              <p class="text-xs md:text-sm text-slate-300 mb-6 leading-relaxed">
+                복잡한 절차 없이 간편한 본인 확인 후<br />
+                <span class="text-white font-bold">평균 3분 이내</span> 안전하게 즉시 정산 처리됩니다.
+              </p>
+            </div>
+
+            <!-- 슬라이드 3 (24시간 최고가 보장) -->
+            <div class="w-full flex-shrink-0">
+              <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
+                24 HOURS<br />
+                <span class="text-amber-400">BEST RATE</span>
+              </h1>
+              <p class="text-xs md:text-sm text-slate-300 mb-6 leading-relaxed">
+                연중무휴 365일 전문 상담사 상시 대기<br />
+                업계 최고 수준의 <span class="text-white font-bold">정직하고 투명한 요율</span>을 보장합니다.
+              </p>
+            </div>
+
+          </div>
+        </div>
 
         <!-- 버튼 세트 -->
         <div class="space-y-3 max-w-sm mx-auto mb-6">
@@ -100,17 +187,17 @@
           </a>
         </div>
 
-        <!-- 인디케이터 닷 -->
-        <div class="flex justify-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-slate-500"></span>
-          <span class="w-2 h-2 rounded-full bg-white"></span>
-          <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+        <!-- 인디케이터 닷 (클릭 시 수동 슬라이드 전환) -->
+        <div class="flex justify-center space-x-2.5">
+          <button onclick="goToSlide(0)" class="dot-btn w-2.5 h-2.5 rounded-full bg-white transition-all"></button>
+          <button onclick="goToSlide(1)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
+          <button onclick="goToSlide(2)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
         </div>
       </div>
     </section>
 
-    <!-- 2. 실시간 현황 & 비율 뱃지 섹션 (와이드 다크 네이비 배경) -->
-    <section class="w-full bg-[#0d1233] text-white py-10 px-5 shadow-inner">
+    <!-- 4. 실시간 현황 & 비율 뱃지 섹션 -->
+    <section id="trust" class="w-full bg-[#0d1233] text-white py-10 px-5 shadow-inner">
       <div class="max-w-xl mx-auto">
         <div class="border-b border-indigo-900/80 pb-3 mb-5">
           <h2 class="text-2xl font-black tracking-wider text-white uppercase">TRUST</h2>
@@ -154,7 +241,7 @@
       </div>
     </section>
 
-    <!-- 3. 빠른 간편 상담 신청 폼 -->
+    <!-- 5. 빠른 간편 상담 신청 폼 -->
     <section class="max-w-xl mx-auto px-4">
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
         <div class="flex items-center space-x-2 mb-2">
@@ -181,9 +268,9 @@
             <select id="userCategory" class="w-full text-sm border border-slate-300 rounded-lg px-3.5 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50">
               <option value="컬쳐랜드 (85%)">컬쳐랜드 상품권 (85%)</option>
               <option value="모바일백화점상품권 (88%)">모바일 백화점 상품권 (88%)</option>
-              <option value="휴대폰 결제 (~75%)">휴대폰 결제 (~75%)</option>
-              <option value="정보 (~62%)">정보(~62%)</option>
-              <option value="신용 한도  (88%)">신용</option>
+              <option value="휴대폰 소액결제 (~75%)">휴대폰 결제 (~75%)</option>
+              <option value="정보이용료/콘텐츠 (~62%)">정보이용료 / 콘텐츠 (~62%)</option>
+              <option value="신용카드 한도 정산 (88%)">신용카드 한도 정산 (88%)</option>
               <option value="기타 모바일상품권 상담">기타 모바일 상품권 상담</option>
             </select>
           </div>
@@ -213,7 +300,7 @@
       </div>
     </section>
 
-    <!-- 4. 사업자 정보 푸터 -->
+    <!-- 6. 사업자 정보 푸터 -->
     <footer class="max-w-xl mx-auto px-4 pb-6">
       <div class="bg-slate-200/80 rounded-2xl p-5 text-xs text-slate-600 space-y-2">
         <p class="font-bold text-slate-800">모바일페이 고객센터 및 사업자 정보</p>
@@ -230,7 +317,7 @@
   </main>
 
   <!-- 하단 고정 플로팅 바 -->
-  <aside class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-2.5 z-50 shadow-2xl">
+  <aside class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-2.5 z-40 shadow-2xl">
     <div class="max-w-md mx-auto grid grid-cols-2 gap-2">
       <a href="tel:010-3965-9767" class="bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
         <i class="fa-solid fa-phone"></i>
@@ -243,8 +330,58 @@
     </div>
   </aside>
 
-  <!-- 실시간 시계 & 텔레그램 연동 스크립트 -->
+  <!-- 스크립트 모음: 사이드메뉴, 자동 슬라이더, 시계, 텔레그램 연동 -->
   <script>
+    // [1] 사이드바 메뉴 토글 기능
+    const sideMenu = document.getElementById('sideMenu');
+    const sideMenuBackdrop = document.getElementById('sideMenuBackdrop');
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+    function toggleMenu() {
+      const isOpen = !sideMenu.classList.contains('-translate-x-full');
+      if (isOpen) {
+        sideMenu.classList.add('-translate-x-full');
+        sideMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        sideMenuBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      } else {
+        sideMenu.classList.remove('-translate-x-full');
+        sideMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        sideMenuBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+      }
+    }
+
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+    sideMenuBackdrop.addEventListener('click', toggleMenu);
+
+    // [2] 상단 배너 반응형 슬라이더 기능
+    let currentSlide = 0;
+    const totalSlides = 3;
+    const sliderTrack = document.getElementById('sliderTrack');
+    const dots = document.querySelectorAll('.dot-btn');
+
+    function goToSlide(index) {
+      currentSlide = index;
+      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.remove('bg-slate-500');
+          dot.classList.add('bg-white');
+        } else {
+          dot.classList.remove('bg-white');
+          dot.classList.add('bg-slate-500');
+        }
+      });
+    }
+
+    // 4초마다 자동 슬라이드 전환
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }, 4000);
+
+    // [3] 실시간 시계 기능
     function updateClock() {
       const now = new Date();
       const year = now.getFullYear();
@@ -260,6 +397,7 @@
     updateClock();
     setInterval(updateClock, 60000);
 
+    // [4] 텔레그램 연동 상담 신청 기능
     document.getElementById('consultForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
