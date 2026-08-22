@@ -50,95 +50,59 @@
 </head>
 <body class="bg-slate-100 text-slate-800 pb-28 relative">
 
-  <!-- 1. 좌측 슬라이드 사이드바 메뉴 (2번 이미지 스타일) -->
+  <!-- 1. 좌측 슬라이드 사이드바 메뉴 -->
   <div id="sideMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
   
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>게시판 제목 | 모바일페이 24시</title>
-  <meta name="description" content="모바일페이 공식 안내 페이지입니다." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-    body { font-family: 'Pretendard', sans-serif; }
-  </style>
-</head>
-<body class="bg-slate-100 text-slate-800 pb-24">
-
-  <!-- 상단 네비게이션 헤더 -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3">
-    <div class="max-w-3xl mx-auto flex items-center justify-between">
-      <a href="/" class="text-slate-700 hover:text-blue-600 font-bold flex items-center gap-1 text-sm">
-        <i class="fa-solid fa-chevron-left"></i> 홈으로
-      </a>
-      <a href="/">
-        <img src="/모바일페이이미지2.png" alt="모바일페이" class="h-9 w-auto object-contain">
-      </a>
-      <a href="tel:010-3965-9767" class="text-xs bg-blue-50 text-blue-600 font-bold px-2.5 py-1 rounded-full border border-blue-200">
-        전화문의
-      </a>
-    </div>
-  </header>
-
-  <!-- 게시판 본문 컨테이너 -->
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-6">
-      
-      <!-- 제목 영역 -->
-      <div class="border-b border-slate-100 pb-4">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">MBPAY INFO</span>
-        <h1 class="text-2xl font-black text-slate-900 mt-1">게시판 대제목을 입력하세요</h1>
-        <p class="text-xs text-slate-400 mt-1">2026.08.22 | 모바일페이 공식 안내</p>
+  <aside id="sideMenu" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-[#0c1033] text-white z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl border-r border-indigo-900/50">
+    <div>
+      <!-- 사이드바 상단 로고 (꽉 찬 로고) & 닫기 버튼 -->
+      <div class="flex items-center justify-between pb-5 border-b border-indigo-900/80">
+        <a href="/" class="flex items-center flex-1 pr-2">
+          <img src="모바일페이이미지2.png" alt="모바일페이" class="h-11 w-auto max-w-[190px] object-contain block">
+        </a>
+        <button id="closeMenuBtn" class="text-slate-400 hover:text-white text-2xl p-1 focus:outline-none">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
 
-      <!-- 본문 글 & 이미지 영역 (원하는 내용으로 자유롭게 편집) -->
-      <article class="text-slate-700 leading-relaxed space-y-4 text-sm md:text-base">
-        <p>여기에 소개 글이나 공지사항 내용을 자유롭게 작성하시면 됩니다. 단락을 추가할 때는 &lt;p&gt; 태그를 사용하세요.</p>
-        
-        <!-- 이미지 삽입 예시 (필요 없으면 삭제 가능) -->
-        <div class="py-2">
-          <img src="/모바일페이이미지2.png" alt="안내 이미지" class="rounded-xl w-full max-w-md mx-auto border border-slate-100 shadow-sm" />
-        </div>
-
-        <h2 class="text-lg font-bold text-slate-900 pt-4 border-t border-slate-100">세부 항목 제목</h2>
-        <p>고객들에게 안내할 상세 절차, 이용 규정, 수수료 기준 등을 명확히 기재할 수 있습니다.</p>
-      </article>
-
-      <!-- 하단 빠른 상담 버튼 배너 -->
-      <div class="mt-8 p-5 bg-[#0d1233] text-white rounded-xl flex flex-col md:flex-row items-center justify-between gap-4">
-        <div>
-          <h3 class="font-bold text-base text-amber-300">24시간 실시간 1:1 상담</h3>
-          <p class="text-xs text-slate-300">궁금하신 사항은 언제든 편하게 문의주세요.</p>
-        </div>
-        <div class="flex gap-2 w-full md:w-auto">
-          <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-none text-center bg-[#FFE812] text-slate-900 font-bold px-4 py-2.5 rounded-lg text-xs">채팅상담</a>
-          <a href="tel:010-3965-9767" class="flex-1 md:flex-none text-center bg-white text-slate-900 font-bold px-4 py-2.5 rounded-lg text-xs">전화상담</a>
-        </div>
-      </div>
-
+      <!-- 메뉴 리스트 (6개 개별 게시판 연결 및 '모바일페이 소개' 변경) -->
+      <nav class="mt-6 space-y-1.5 text-sm font-semibold">
+        <a href="/about/" class="block py-3 px-3.5 rounded-lg text-amber-400 bg-white/5 border-l-4 border-amber-400 transition">
+          모바일페이 소개
+        </a>
+        <a href="/rates/" class="block py-3 px-3.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          수수료 안내 (요율표)
+        </a>
+        <a href="/process/" class="block py-3 px-3.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          진행 안내 (상담절차)
+        </a>
+        <a href="/notice/" class="block py-3 px-3.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          공지사항
+        </a>
+        <a href="/reviews/" class="block py-3 px-3.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 border-b border-indigo-950/60 transition">
+          이용 후기
+        </a>
+        <a href="/faq/" class="block py-3 px-3.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition">
+          질문 답변 (FAQ)
+        </a>
+      </nav>
     </div>
-  </main>
 
-  <!-- 하단 고정 플로팅 바 -->
-  <aside class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-2.5 z-40 shadow-2xl">
-    <div class="max-w-md mx-auto grid grid-cols-2 gap-2">
-      <a href="tel:010-3965-9767" class="bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
+    <!-- 사이드바 하단 버튼 세트 -->
+    <div class="space-y-2 pt-6 border-t border-indigo-900/60">
+      <a href="tel:010-3965-9767" class="w-full bg-[#1e2768] hover:bg-[#161c4d] text-white font-bold py-3 rounded-lg flex items-center justify-center space-x-2 text-xs shadow transition">
         <i class="fa-solid fa-phone"></i>
         <span>전화 상담하기</span>
       </a>
-      <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow transition">
+      <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-lg flex items-center justify-center space-x-2 text-xs shadow transition">
         <i class="fa-solid fa-comment"></i>
         <span>채팅 상담하기</span>
       </a>
+      <div class="pt-2 text-[10px] text-slate-500 text-center">
+        365일 24시간 실시간 고객센터
+      </div>
     </div>
   </aside>
-
-</body>
-</html>
 
   <!-- 2. 상단 네비게이션 헤더 -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3">
@@ -161,7 +125,7 @@
 
   <main class="w-full space-y-6">
 
-    <!-- 3. 히어로 배너 섹션 (반응형 1, 2, 3 슬라이더 탑재) -->
+    <!-- 3. 히어로 배너 섹션 (반응형 1, 2, 3 자동 슬라이더) -->
     <section class="w-full bg-gradient-to-b from-[#0e1630] via-[#121c42] to-[#1a237e] text-white pt-10 pb-12 px-5 text-center shadow-lg overflow-hidden">
       <div class="max-w-xl mx-auto">
         <div class="inline-flex items-center bg-white/10 backdrop-blur border border-white/20 px-3.5 py-1 rounded-full text-xs text-slate-200 mb-5 font-medium shadow-sm">
@@ -172,7 +136,7 @@
         <div class="relative w-full overflow-hidden min-h-[160px]">
           <div id="sliderTrack" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
             
-            <!-- 슬라이드 1 (기본 솔루션) -->
+            <!-- 슬라이드 1 -->
             <div class="w-full flex-shrink-0">
               <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
                 MOBILE<br />
@@ -184,7 +148,7 @@
               </p>
             </div>
 
-            <!-- 슬라이드 2 (초스피드 3분 입금) -->
+            <!-- 슬라이드 2 -->
             <div class="w-full flex-shrink-0">
               <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
                 QUICK & SAFE<br />
@@ -196,7 +160,7 @@
               </p>
             </div>
 
-            <!-- 슬라이드 3 (24시간 최고가 보장) -->
+            <!-- 슬라이드 3 -->
             <div class="w-full flex-shrink-0">
               <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
                 24 HOURS<br />
@@ -223,11 +187,11 @@
           </a>
         </div>
 
-        <!-- 인디케이터 닷 (클릭 시 수동 슬라이드 전환) -->
+        <!-- 인디케이터 닷 -->
         <div class="flex justify-center space-x-2.5">
-          <button onclick="goToSlide(0)" class="dot-btn w-2.5 h-2.5 rounded-full bg-white transition-all"></button>
-          <button onclick="goToSlide(1)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
-          <button onclick="goToSlide(2)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
+          <button type="button" onclick="goToSlide(0)" class="dot-btn w-2.5 h-2.5 rounded-full bg-white transition-all"></button>
+          <button type="button" onclick="goToSlide(1)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
+          <button type="button" onclick="goToSlide(2)" class="dot-btn w-2.5 h-2.5 rounded-full bg-slate-500 transition-all"></button>
         </div>
       </div>
     </section>
