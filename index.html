@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head >
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18400055598"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18400055598"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'AW-18400055598');
-</script>
+    gtag('config', 'AW-18400055598');
+  </script>
 
   <!-- 네이버 서치어드바이저 소유확인 태그 -->
   <meta name="naver-site-verification" content="87bff4142148c064c79bb764998c4c6bd8ab6a06" />
@@ -52,16 +52,16 @@
 
   <!-- 상단 네비게이션 헤더 -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3">
-    <div class="max-w-md mx-auto flex items-center justify-between">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
         <button class="text-slate-700 text-lg focus:outline-none flex items-center space-x-1.5 font-bold">
           <i class="fa-solid fa-bars"></i>
           <span class="text-xs uppercase tracking-wider">MENU</span>
         </button>
       </div>
-   <a href="/" class="flex items-center">
-            <img src="모바일페이이미지2.png" alt="모바일페이" class="h-10 w-auto object-contain block" style="margin-top: -6px; margin-bottom: -6px;">
-          </a>
+      <a href="/" class="flex items-center">
+        <img src="모바일페이이미지2.png" alt="모바일페이" class="h-10 w-auto object-contain block" style="margin-top: -6px; margin-bottom: -6px;">
+      </a>
       <div class="text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200 font-semibold flex items-center space-x-1">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
         <span>24H 실시간</span>
@@ -69,155 +69,163 @@
     </div>
   </header>
 
-  <main class="max-w-md mx-auto space-y-4">
+  <main class="w-full space-y-6">
 
-    <!-- 히어로 배너 섹션 -->
-    <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-indigo-950 text-white pt-8 pb-10 px-5 text-center shadow-lg">
-      <div class="inline-flex items-center bg-white/10 backdrop-blur border border-white/20 px-3 py-1 rounded-full text-[11px] text-slate-200 mb-4 font-medium">
-        <span class="text-emerald-400 font-bold mr-1">N</span> 네이버에 <strong class="text-white ml-1 font-bold">모바일페이</strong>를 검색해보세요
-      </div>
-
-      <h1 class="text-2xl font-black tracking-tight mb-2 uppercase text-white">
-        MOBILE<br />
-        <span class="text-amber-400">SOLUTION</span>
-      </h1>
-      
-      <p class="text-xs text-slate-300 mb-6 leading-relaxed">
-        시간과 장소에 구애받지 않고<br />
-        모바일에서 <span class="text-white font-bold">더 빠르고 편리하게</span> 상담을 진행합니다.
-      </p>
-
-      <!-- 버튼 세트 -->
-      <div class="space-y-2 max-w-xs mx-auto mb-6">
-        <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
-          <i class="fa-solid fa-comment"></i>
-          <span>채팅 상담하기</span>
-        </a>
-        <a href="tel:010-3965-9767" class="w-full bg-white hover:bg-slate-50 text-slate-900 font-bold py-3 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
-          <i class="fa-solid fa-phone"></i>
-          <span>전화 상담하기</span>
-        </a>
-      </div>
-
-      <!-- 인디케이터 닷 -->
-      <div class="flex justify-center space-x-2">
-        <span class="w-2 h-2 rounded-full bg-slate-500"></span>
-        <span class="w-2 h-2 rounded-full bg-white"></span>
-        <span class="w-2 h-2 rounded-full bg-slate-500"></span>
-      </div>
-    </section>
-
-    <!-- 실시간 현황 & 비율 뱃지 섹션 -->
-    <section class="bg-[#12163A] text-white p-6 shadow-md rounded-2xl mx-3">
-      <div class="border-b border-indigo-900/60 pb-3 mb-4">
-        <h2 class="text-xl font-black tracking-wider text-white uppercase">TRUST</h2>
-        <p class="text-[11px] text-indigo-200">언제나 고객 신뢰를 최우선으로 업무를 진행하고 있습니다</p>
-      </div>
-
-      <div class="flex justify-between items-end mb-6">
-        <div class="space-y-1">
-          <div class="flex items-baseline space-x-2">
-            <span class="text-xs font-bold text-indigo-300 w-14">TODAY</span>
-            <span id="todayCount" class="text-base font-extrabold text-amber-300">20,409,210원</span>
-          </div>
-          <div class="flex items-baseline space-x-2">
-            <span class="text-xs font-bold text-indigo-300 w-14">TOTAL</span>
-            <span id="totalCount" class="text-base font-extrabold text-white">1,263,943,049원</span>
-          </div>
-        </div>
-        <div id="liveClock" class="text-xs font-bold text-slate-300 tracking-wide bg-indigo-900/50 px-2.5 py-1 rounded">
-          2026.08.17 18:49
-        </div>
-      </div>
-
-      <!-- 퍼센트 원형 카드 그리드 (2열 구성) -->
-      <div class="grid grid-cols-2 gap-3 pt-2">
-        <!-- 컬쳐랜드 85% -->
-        <div class="bg-indigo-950/70 border border-indigo-500/30 rounded-xl p-3.5 flex items-center justify-between shadow-inner">
-          <span class="text-xs font-bold text-slate-100">컬쳐랜드</span>
-          <div class="w-13 h-13 rounded-full border-2 border-amber-400 bg-indigo-900 flex items-center justify-center p-2 shadow">
-            <span class="text-amber-400 font-extrabold text-sm tracking-tighter">85%</span>
-          </div>
+    <!-- 1. 히어로 배너 섹션 (화면 좌우 꽉 찬 와이드 배경) -->
+    <section class="w-full bg-gradient-to-b from-[#0e1630] via-[#121c42] to-[#1a237e] text-white pt-10 pb-12 px-5 text-center shadow-lg">
+      <div class="max-w-xl mx-auto">
+        <div class="inline-flex items-center bg-white/10 backdrop-blur border border-white/20 px-3.5 py-1 rounded-full text-xs text-slate-200 mb-5 font-medium shadow-sm">
+          <span class="text-emerald-400 font-bold mr-1.5">N</span> 네이버에 <strong class="text-white ml-1 font-bold">모바일페이</strong>를 검색해보세요
         </div>
 
-        <!-- 모바일백화점상품권 88% -->
-        <div class="bg-indigo-950/70 border border-indigo-500/30 rounded-xl p-3.5 flex items-center justify-between shadow-inner">
-          <span class="text-xs font-bold text-slate-100 leading-tight">모바일<br />백화점상품권</span>
-          <div class="w-13 h-13 rounded-full border-2 border-amber-400 bg-indigo-900 flex items-center justify-center p-2 shadow">
-            <span class="text-amber-400 font-extrabold text-sm tracking-tighter">88%</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 빠른 간편 상담 신청 폼 -->
-    <section class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 mx-3">
-      <div class="flex items-center space-x-2 mb-3">
-        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-        <h3 class="font-extrabold text-base text-slate-900">5분 내 빠른 1:1 간편 접수</h3>
-      </div>
-      <p class="text-xs text-slate-500 mb-4">
-        접수 즉시 텔레그램 실시간 알림을 통해 담당자가 신속히 안내드립니다.
-      </p>
-
-      <form id="consultForm" class="space-y-3">
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">성함 / 닉네임</label>
-          <input type="text" id="userName" required placeholder="홍길동" class="w-full text-sm border border-slate-300 rounded-lg px-3 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50" />
-        </div>
+        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-3 uppercase text-white">
+          MOBILE<br />
+          <span class="text-amber-400">SOLUTION</span>
+        </h1>
         
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">연락처</label>
-          <input type="tel" id="userPhone" required placeholder="010-1234-5678" class="w-full text-sm border border-slate-300 rounded-lg px-3 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50" />
+        <p class="text-xs md:text-sm text-slate-300 mb-8 leading-relaxed">
+          시간과 장소에 구애받지 않고<br />
+          모바일에서 <span class="text-white font-bold">더 빠르고 편리하게</span> 상담을 진행합니다.
+        </p>
+
+        <!-- 버튼 세트 -->
+        <div class="space-y-3 max-w-sm mx-auto mb-6">
+          <a href="https://clspg.channel.io" target="_blank" rel="noopener noreferrer" class="w-full bg-[#FFE812] hover:bg-[#FDD835] text-slate-900 font-bold py-3.5 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
+            <i class="fa-solid fa-comment"></i>
+            <span>채팅 상담하기</span>
+          </a>
+          <a href="tel:010-3965-9767" class="w-full bg-white hover:bg-slate-50 text-slate-900 font-bold py-3.5 rounded-full flex items-center justify-center space-x-2 text-sm shadow-md transition">
+            <i class="fa-solid fa-phone"></i>
+            <span>전화 상담하기</span>
+          </a>
         </div>
 
-     <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">상담 희망 품목</label>
-          <select id="userCategory" class="w-full text-sm border border-slate-300 rounded-lg px-3 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50">
-            <option value="컬쳐랜드 (85%)">컬쳐랜드 상품권 (85%)</option>
-            <option value="모바일백화점상품권 (88%)">모바일 백화점 상품권 (88%)</option>
-            <option value="휴대폰 소액결제 (~75%)">휴대폰 결제</option>
-            <option value="정보이용료/콘텐츠 (~62%)">정보</option>
-            <option value="신용카드 한도 정산 (88%)">신용</option>
-            <option value="기타 모바일상품권 상담">기타 모바일 상품권 상담</option>
-          </select>
+        <!-- 인디케이터 닷 -->
+        <div class="flex justify-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span class="w-2 h-2 rounded-full bg-slate-500"></span>
         </div>
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">신청 금액대</label>
-          <select id="userAmount" class="w-full text-sm border border-slate-300 rounded-lg px-3 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50">
-            <option value="10~30만원">10만 원 ~ 30만 원</option>
-            <option value="30~50만원">30만 원 ~ 50만 원</option>
-            <option value="50~100만원">50만 원 ~ 100만 원</option>
-            <option value="100만원 이상">100만 원 이상</option>
-          </select>
-        </div>
-
-        <div class="flex items-start space-x-2 pt-1">
-          <input type="checkbox" id="privacyAgree" required checked class="mt-0.5 rounded text-blue-600 focus:ring-blue-500" />
-          <label for="privacyAgree" class="text-[11px] text-slate-500 leading-tight">
-            개인정보 수집 및 맞춤 상담 안내 연락에 동의합니다. (필수)
-          </label>
-        </div>
-
-        <button type="submit" id="submitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl text-sm transition shadow flex items-center justify-center space-x-2 mt-2">
-          <span>실시간 상담 신청하기</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </button>
-      </form>
+      </div>
     </section>
 
-    <!-- 사업자 정보 푸터 -->
-    <footer class="bg-slate-200/80 rounded-2xl p-5 text-[11px] text-slate-600 space-y-2 mx-3">
-      <p class="font-bold text-slate-800">모바일페이 고객센터 및 사업자 정보</p>
-      <div class="leading-relaxed text-slate-500">
-        상호명: 모바일페이 | 대표자: 강태현<br />
-        사업자등록번호: 875-96-01634 | 도메인: cashoutmobilepay.co.kr<br />
-        고객센터: 010-3965-9767 | 365일 24시간 연중무휴
+    <!-- 2. 실시간 현황 & 비율 뱃지 섹션 (와이드 다크 네이비 배경) -->
+    <section class="w-full bg-[#0d1233] text-white py-10 px-5 shadow-inner">
+      <div class="max-w-xl mx-auto">
+        <div class="border-b border-indigo-900/80 pb-3 mb-5">
+          <h2 class="text-2xl font-black tracking-wider text-white uppercase">TRUST</h2>
+          <p class="text-xs text-indigo-200">언제나 고객 신뢰를 최우선으로 업무를 진행하고 있습니다</p>
+        </div>
+
+        <div class="flex justify-between items-end mb-6">
+          <div class="space-y-1.5">
+            <div class="flex items-baseline space-x-2">
+              <span class="text-xs font-bold text-indigo-300 w-14">TODAY</span>
+              <span id="todayCount" class="text-lg font-extrabold text-amber-300">20,409,210원</span>
+            </div>
+            <div class="flex items-baseline space-x-2">
+              <span class="text-xs font-bold text-indigo-300 w-14">TOTAL</span>
+              <span id="totalCount" class="text-lg font-extrabold text-white">1,263,943,049원</span>
+            </div>
+          </div>
+          <div id="liveClock" class="text-xs font-bold text-slate-300 tracking-wide bg-indigo-950/80 border border-indigo-800/50 px-3 py-1.5 rounded">
+            2026.08.17 18:49
+          </div>
+        </div>
+
+        <!-- 퍼센트 원형 카드 그리드 -->
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <!-- 컬쳐랜드 85% -->
+          <div class="bg-[#151b47] border border-indigo-500/30 rounded-xl p-4 flex items-center justify-between shadow">
+            <span class="text-sm font-bold text-slate-100">컬쳐랜드</span>
+            <div class="w-14 h-14 rounded-full border-2 border-amber-400 bg-indigo-950 flex items-center justify-center p-2 shadow-inner">
+              <span class="text-amber-400 font-extrabold text-base tracking-tighter">85%</span>
+            </div>
+          </div>
+
+          <!-- 모바일백화점상품권 88% -->
+          <div class="bg-[#151b47] border border-indigo-500/30 rounded-xl p-4 flex items-center justify-between shadow">
+            <span class="text-sm font-bold text-slate-100 leading-tight">모바일<br />백화점상품권</span>
+            <div class="w-14 h-14 rounded-full border-2 border-amber-400 bg-indigo-950 flex items-center justify-center p-2 shadow-inner">
+              <span class="text-amber-400 font-extrabold text-base tracking-tighter">88%</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="text-slate-400 pt-2 border-t border-slate-300">
-        © 2026 모바일페이. All rights reserved.
-      </p>
+    </section>
+
+    <!-- 3. 빠른 간편 상담 신청 폼 -->
+    <section class="max-w-xl mx-auto px-4">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+        <div class="flex items-center space-x-2 mb-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+          <h3 class="font-extrabold text-base text-slate-900">5분 내 빠른 1:1 간편 접수</h3>
+        </div>
+        <p class="text-xs text-slate-500 mb-5">
+          접수 즉시 텔레그램 실시간 알림을 통해 담당자가 신속히 안내드립니다.
+        </p>
+
+        <form id="consultForm" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">성함 / 닉네임</label>
+            <input type="text" id="userName" required placeholder="홍길동" class="w-full text-sm border border-slate-300 rounded-lg px-3.5 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50" />
+          </div>
+          
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">연락처</label>
+            <input type="tel" id="userPhone" required placeholder="010-1234-5678" class="w-full text-sm border border-slate-300 rounded-lg px-3.5 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">상담 희망 품목</label>
+            <select id="userCategory" class="w-full text-sm border border-slate-300 rounded-lg px-3.5 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50">
+              <option value="컬쳐랜드 (85%)">컬쳐랜드 상품권 (85%)</option>
+              <option value="모바일백화점상품권 (88%)">모바일 백화점 상품권 (88%)</option>
+              <option value="휴대폰 결제 (~75%)">휴대폰 결제 (~75%)</option>
+              <option value="정보 (~62%)">정보(~62%)</option>
+              <option value="신용 한도  (88%)">신용</option>
+              <option value="기타 모바일상품권 상담">기타 모바일 상품권 상담</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">신청 금액대</label>
+            <select id="userAmount" class="w-full text-sm border border-slate-300 rounded-lg px-3.5 py-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-slate-50">
+              <option value="10~30만원">10만 원 ~ 30만 원</option>
+              <option value="30~50만원">30만 원 ~ 50만 원</option>
+              <option value="50~100만원">50만 원 ~ 100만 원</option>
+              <option value="100만원 이상">100만 원 이상</option>
+            </select>
+          </div>
+
+          <div class="flex items-start space-x-2 pt-1">
+            <input type="checkbox" id="privacyAgree" required checked class="mt-0.5 rounded text-blue-600 focus:ring-blue-500" />
+            <label for="privacyAgree" class="text-xs text-slate-500 leading-tight">
+              개인정보 수집 및 맞춤 상담 안내 연락에 동의합니다. (필수)
+            </label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl text-sm transition shadow flex items-center justify-center space-x-2 mt-2">
+            <span>실시간 상담 신청하기</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. 사업자 정보 푸터 -->
+    <footer class="max-w-xl mx-auto px-4 pb-6">
+      <div class="bg-slate-200/80 rounded-2xl p-5 text-xs text-slate-600 space-y-2">
+        <p class="font-bold text-slate-800">모바일페이 고객센터 및 사업자 정보</p>
+        <div class="leading-relaxed text-slate-500 text-[11px]">
+          상호명: 모바일페이 | 대표자: 강태현<br />
+          사업자등록번호: 875-96-01634 | 도메인: cashoutmobilepay.co.kr<br />
+          고객센터: 010-3965-9767 | 365일 24시간 연중무휴
+        </div>
+        <p class="text-slate-400 pt-2 border-t border-slate-300 text-[10px]">
+          © 2026 모바일페이. All rights reserved.
+        </p>
+      </div>
     </footer>
   </main>
 
